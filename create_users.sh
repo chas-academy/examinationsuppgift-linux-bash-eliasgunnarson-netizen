@@ -32,7 +32,6 @@ for username in "$@"; do
     chown -R "$username:$username" "$home_dir/Documents" "$home_dir/Downloads" "$home_dir/Work"
     chmod 700 "$home_dir/Documents" "$home_dir/Downloads" "$home_dir/Work"
 
-
     # Skapa en personlig välkomstfil och lista andra användare som finns i systemet
     {
         echo "Välkommen $username"
