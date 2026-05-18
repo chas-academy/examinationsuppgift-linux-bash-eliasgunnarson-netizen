@@ -23,7 +23,7 @@ for username in "$@"; do
 
     useradd -m "$username"
     
-    home_dir="/home/$username"
+    home_dir=$(getent passwd "$username" | cut -d: -f6)
 
     # Skapa de mappar som varje ny användare ska ha i sin hemkatalog
     mkdir -p "$home_dir/Documents" "$home_dir/Downloads" "$home_dir/Work"
