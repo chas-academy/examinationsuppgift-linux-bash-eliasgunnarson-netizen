@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Kontrollera att scriptet körs som root eftersom useradd och rättigheter kräver det
+#  Kontrollera att scriptet körs som root eftersom useradd och rättigheter kräver det
 if [ "$EUID" -ne 0 ]; then
     echo "Fel: Detta script måste köras som root."
     exit 1
