@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Kontrollera att scriptet körs som root eftersom useradd och rättigheter kräver det
+# Kontrollera att scriptet körs som root eftersom useradd 
 if [ "$EUID" -ne 0 ]; then
     echo "Fel: Detta script måste köras som root."
     exit 1
@@ -39,5 +39,5 @@ for username in "$@"; do
     } > "$home_dir/welcome.txt"
 
     chown "$username:$username" "$home_dir/welcome.txt"
-    chmod 600 "$home_dir/welcome.txt"
 done
+
